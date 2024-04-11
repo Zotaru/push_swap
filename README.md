@@ -1,60 +1,60 @@
 # Push Swap
 
-Ce projet est une implémentation du jeu de tri "Push Swap", réalisé dans le cadre de l'école 42. L'objectif de ce projet est de trier une pile d'entiers dans un ordre croissant en utilisant un ensemble de règles spécifiques pour manipuler les piles.
+This project is an implementation of the "Push Swap" sorting game, done as part of the 42 school curriculum. The objective of this project is to sort a stack of integers in ascending order using a specific set of rules for stack manipulation.
 
 ### Language : ![C language](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-### Règles du jeu
-Le jeu de tri "Push Swap" consiste à trier une pile d'entiers à l'aide de deux piles et un ensemble de règles de manipulation. Voici les règles de base :
+### Game rules
+The "Push Swap" sorting game involves sorting a stack of integers using two stacks and a set of manipulation rules. Here are the basic rules:
 
-* On dispose de deux piles, nommées A et B.
-* Au début, A contient un certain nombre d'entiers désordonnés, et B est vide.
-* L'objectif est de trier les entiers de la pile A dans l'ordre croissant en utilisant uniquement les opérations suivantes :
-  * sa : échanger les deux premiers éléments de la pile A.
-  * sb : échanger les deux premiers éléments de la pile B.
-  * ss : effectuer sa et sb simultanément.
-  * pa : déplacer le premier élément de la pile B au début de la pile A.
-  * pb : déplacer le premier élément de la pile A au début de la pile B.
-  * ra : faire une rotation de la pile A vers le haut (le premier élément devient le dernier).
-  * rb : faire une rotation de la pile B vers le haut (le premier élément devient le dernier).
-  * rr : effectuer ra et rb simultanément.
-  * rra : faire une rotation de la pile A vers le bas (le dernier élément devient le premier).
-  * rrb : faire une rotation de la pile B vers le bas (le dernier élément devient le premier).
-  * rrr : effectuer rra et rrb simultanément.
+* There are two stacks, named A and B.
+* Initially, A contains a certain number of unordered integers, and B is empty.
+* The goal is to sort the integers in stack A in ascending order using only the following operations:
+  * sa: swap the first two elements of stack A.
+  * sb: swap the first two elements of stack B.
+  * ss: perform sa and sb simultaneously.
+  * pa: move the first element of stack B to the top of stack A.
+  * pb: move the first element of stack A to the top of stack B.
+  * ra: rotate stack A upwards (the first element becomes the last).
+  * rb: rotate stack B upwards (the first element becomes the last).
+  * rr: perform ra and rb simultaneously.
+  * rra: rotate stack A downwards (the last element becomes the first).
+  * rrb: rotate stack B downwards (the last element becomes the first).
+  * rrr: perform rra and rrb simultaneously.
 
-### Fonctionnalités
-Ce projet comprend les fonctionnalités suivantes :
+### Features
+This project includes the following features:
 
-* Un programme push_swap qui prend en entrée une liste d'entiers non triés et affiche une série d'opérations permettant de trier la pile.
-* Un programme checker qui prend en entrée une série d'opérations et une liste d'entiers, et vérifie si ces opérations permettent de trier la pile d'entiers correctement.
-* Un ensemble de scripts de test pour évaluer la performance et la précision des programmes.
+* A push_swap program that takes an input list of unsorted integers and displays a series of operations to sort the stack.
+* A checker program that takes a series of operations and an integer list as input and checks if these operations correctly sort the stack of integers.
+* A set of test scripts to evaluate the performance and accuracy of the programs.
 
-### Utilisation
+### Usage
 
 #### Compilation
-Pour compiler les programmes, exécutez la commande suivante :
+To compile the programs, execute the following command:
 
 ```terminal
 make
 ```
 
-#### Utilisation de push_swap
+#### Usage of push_swap
 
-Pour utiliser le programme push_swap, exécutez la commande suivante :
+To use the push_swap program, execute the following command:
 
 ```bash
-./push_swap [liste d'entiers]
+./push_swap [integer list]
 ```
-où [liste d'entiers] est une liste d'entiers non triés séparés par des espaces.
+where [interger list] is a space-separated list of unsorted integers..
 
-#### Utilisation de checker
-Pour utiliser le programme checker, exécutez la commande suivante :
+#### Usage of checker
+To use the checker program, execute the following command:
 *
 ```
-ARG="[liste d'entiers]" ./checker [opérations]
+ARG="[integer list]" ./checker [opérations]
 ```
-où [liste d'entiers] est une liste d'entiers non triés séparés par des espaces, et [opérations] est une série d'opérations séparées par des espaces.
+where [integer list] is a space-separated list of unsorted integers, and [operations] is a series of space-separated operations.
 
-Exemple d'utilisation
+Exemple of usage :
 
 ```shell
 $> ./push_swap 4 67 3 87
@@ -65,6 +65,8 @@ rra
 pa
 $> ARG="4 67 3 87" ./checker sa rra pb rra pa
 OK
+$> ./push_swap 4 67 3 87 | ./checker 4 67 3 87
+OK
 ```
-#### help
+#### help : 
 [push swap visualizer](https://github.com/o-reo/push_swap_visualizer)
