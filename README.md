@@ -36,6 +36,10 @@ To compile the programs, execute the following command:
 ```terminal
 make
 ```
+and
+```
+make bonus
+```
 
 #### Usage of push_swap
 
